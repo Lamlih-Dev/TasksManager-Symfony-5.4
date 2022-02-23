@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Show a Task - Learn Symfony {% endblock %}
+
+{% block body %}
+    {% if task == null %}
+        <h1>404 Task Not Found !</h1>
+        <p>The task that your looking for does not exist ! Please re-verify if the ID is correct.</p>
+        <a href="/" class="btn btn-info">Back To Home Page</a>
+    {% else %}
+        <h1>Show details of task number {{task.id}} : </h1>
+        <hr class="mb-5">
+        <p><span class="fw-bold">ID : </span>{{task.id}}</p>
+        <p><span class="fw-bold">Title : </span>{{task.title}}</td>
+        <p><span class="fw-bold">Description : </span>{{task.description}}</p>
+        <a href="/task/allTasks" class="btn btn-info">Back To Tasks List</a>
+    {% endif %}
+    
+{% endblock %}

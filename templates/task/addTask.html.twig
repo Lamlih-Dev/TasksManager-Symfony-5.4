@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+
+{% block title %} Add a Task - Learn Symfony {% endblock %}
+
+{% block body %} 
+    <h1>Add A New Task : </h1>
+    <hr class="mb-5">
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+
+        <input class="btn btn-primary" type="submit" value="Add Task"/>
+    {{ form_end(form) }}
+{% endblock %}
